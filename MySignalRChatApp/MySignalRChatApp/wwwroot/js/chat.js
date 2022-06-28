@@ -29,9 +29,9 @@ async function close() {
 }
 
 connection.onclose(async () => {
-    var li = document.createElement("li");
-    document.getElementById("messagesList").appendChild(li);
-    li.textContent = "Disconnected!"
+    var dt = document.createElement("dt");
+    document.getElementById("messagesList").appendChild(dt);
+    dt.textContent = "Disconnected!"
     await start(); // keep the user always connected
 });
 
@@ -39,20 +39,23 @@ connection.onclose(async () => {
 //Disable the send button until connection is established.
 document.getElementById("sendButton").disabled = true;
 
-var li = document.createElement("li");
-document.getElementById("messagesList").appendChild(li);
-li.textContent = "Connected!"
+var dt = document.createElement("dt");
+document.getElementById("messagesList").appendChild(dt);
+dt.textContent = "Connected!"
 
 connection.on("ReceiveMessage", function (user, message) {
-    var li = document.createElement("li");
-    document.getElementById("messagesList").appendChild(li);
+    var dt = document.createElement("dt");
+    var dd = document.createElement("dd");
+    document.getElementById("messagesList").appendChild(dt);
+    document.getElementById("messagesList").appendChild(dd);
     // We can assign user-supplied strings to an element's textContent because it
     // is not interpreted as markup. If you're assigning in any other way, you 
     // should be aware of possible script injection concerns.
-    li.textContent = `${user} says ${message}`;
+    dt.textContent = `${user}:`
+    dd.textContent = `${ message }`;
 
     // Testing purposes
-    // close(); //Uncomment for test purposes to see the disconnect message
+    //close(); //Uncomment for test purposes to see the disconnect message
 });
 
 connection.start().then(function () {
