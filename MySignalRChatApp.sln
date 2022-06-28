@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySignalRChatApp", "MySignalRChatApp\MySignalRChatApp.csproj", "{0F0DE804-E332-402F-940E-016586BC056E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F0DE804-E332-402F-940E-016586BC056E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F0DE804-E332-402F-940E-016586BC056E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F0DE804-E332-402F-940E-016586BC056E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F0DE804-E332-402F-940E-016586BC056E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F8C2FF0-BBCA-4B84-8E73-D13E06952820}
+	EndGlobalSection
+EndGlobal
